@@ -1,7 +1,6 @@
 package com.cs.assignone;
 
 import com.cs.assignone.question1.Question1;
-import com.cs.assignone.question2.Question2;
 
 import com.cs.assignone.dependencies.csUtility;
 import com.cs.assignone.dependencies.csScanner;
@@ -15,7 +14,6 @@ public class App
     public static csScanner scn = new csScanner();
 
     public static Question1 question1 = new Question1();
-    public static Question2 question2 = new Question2();
 
 //    public static Object[] options = {new Question1(), new Question2()};
 
@@ -31,7 +29,6 @@ public class App
             System.out.println("OPTIONS");
             System.out.println("=======================================");
             System.out.println("1 - Question 1");
-            System.out.println("2 - Question 2");
             System.out.println("=======================================");
 
             do {
@@ -41,10 +38,6 @@ public class App
                     case '1':
                         System.out.println("starting question 1");
                         question1.main(args);
-                        break;
-                    case '2':
-                        System.out.println("starting question 2");
-                        question2.main(args);
                         break;
                     default:
                         System.out.println("Invalid Entry please try again");
