@@ -1,4 +1,4 @@
-package com.cs.assignone;
+package com.cs.assigntwo;
 
 import static org.junit.Assert.assertTrue;
 

@@ -2,7 +2,7 @@
   <artifact type="jar" build-on-make="true" name="assignone">
     <output-path>$PROJECT_DIR$</output-path>
     <root id="archive" name="assignone.jar">
-      <element id="module-output" name="assignone" />
+      <element id="module-output" name="assigntwo" />
     </root>
   </artifact>
 </component>

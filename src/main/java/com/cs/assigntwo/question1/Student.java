@@ -1,4 +1,4 @@
-package com.cs.assignone.question1;
+package com.cs.assigntwo.question1;
 
 public class Student {
     /*
@@ -17,7 +17,7 @@ public class Student {
     (j) A final grade, which is a string (to be calculated within the program)
      */
 
-    private long studentID
+    private long studentID;
     private String title;
     private String firstName;
     private String lastName;
@@ -30,7 +30,47 @@ public class Student {
     private PracticalWork[] practicalWorks;
     private FinalExam finalExam;
 
-    public Student() { }
+    /**
+     * Default constructor
+     */
+    public Student(){}
+
+    /**
+     * Constructor for Student
+     * @param studentID studentID
+     * @param title title
+     * @param firstName firstName
+     * @param lastName lastName
+     * @param dateOfBirth_day dateOfBirth_day
+     * @param dateOfBirth_month dateOfBirth_month
+     * @param dateOfBirth_year dateOfBirth_year
+     */
+    public Student(long studentID, String title, String firstName, String lastName, int dateOfBirth_day, int dateOfBirth_month, int dateOfBirth_year) {
+        this.studentID = studentID;
+        this.title = title;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth_day = dateOfBirth_day;
+        this.dateOfBirth_month = dateOfBirth_month;
+        this.dateOfBirth_year = dateOfBirth_year;
+        this.assignments = new Assignment[3];
+        this.practicalWorks = new PracticalWork[3];
+        this.finalExam = null;
+    }
+
+    public double getOverallMark(){
+        return 100.00; //replace with getOverallMark method
+    }
+
+    public String getFinalGrade(){
+        double marks = getOverallMark();
+        if(marks >= 80) return "HD";
+        else if(marks >= 70) return "D";
+        else if(marks >= 60) return "C";
+        else if(marks >= 50) return "P";
+        else return "N";
+    }
+
 
     /**
      * getter method for student ID
@@ -97,16 +137,8 @@ public class Student {
     }
 
     /**
-     * setter method of studentID
-     * @param studentID
-     */
-    public void setStudentID(long studentID) {
-        this.studentID = studentID;
-    }
-
-    /**
      * setter method for title
-     * @param title
+     * @param title new title
      */
     public void setTitle(String title) {
         this.title = title;
@@ -114,7 +146,7 @@ public class Student {
 
     /**
      * setter method for firstName
-     * @param firstName
+     * @param firstName new firstname
      */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -122,7 +154,7 @@ public class Student {
 
     /**
      * setter mothod for lastName
-     * @param lastName
+     * @param lastName new lastName
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
@@ -130,9 +162,9 @@ public class Student {
 
     /**
      * setter method for dateOfBirth
-     * @param dateOfBirth_day
-     * @param dateOfBirth_month
-     * @param dateOfBirth_year
+     * @param dateOfBirth_day new dateOfBirth_day
+     * @param dateOfBirth_month new dateOfBirth_month
+     * @param dateOfBirth_year new dateOfBirth_year
      */
     public void setDateOfBirth(int dateOfBirth_day, int dateOfBirth_month, int dateOfBirth_year) {
         this.dateOfBirth_day = dateOfBirth_day;
@@ -142,7 +174,7 @@ public class Student {
 
     /**
      * setter method for assignments as array
-     * @param assignments
+     * @param assignments new array of assignments
      */
     public void setAssignments(Assignment[] assignments) {
         this.assignments = assignments;
@@ -150,7 +182,7 @@ public class Student {
 
     /**
      * setter method for practicalWorks as array
-     * @param practicalWorks
+     * @param practicalWorks new array of practicalWorks
      */
     public void setPracticalWorks(PracticalWork[] practicalWorks) {
         this.practicalWorks = practicalWorks;
@@ -158,9 +190,18 @@ public class Student {
 
     /**
      * setter method for finalExam
-     * @param finalExam
+     * @param finalExam new array of finalExam
      */
     public void setFinalExam(FinalExam finalExam) {
         this.finalExam = finalExam;
+    }
+
+    /**
+     * Override the toString method
+     * @return Class representation String
+     */
+    @Override
+    public String toString(){
+        return "< Student id=" + this.studentID + " >";
     }
 }

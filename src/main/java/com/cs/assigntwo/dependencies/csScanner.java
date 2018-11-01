@@ -1,4 +1,4 @@
-package com.cs.assignone.dependencies;
+package com.cs.assigntwo.dependencies;
 
 
 import java.util.Scanner;

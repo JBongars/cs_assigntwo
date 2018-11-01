@@ -1,9 +1,9 @@
-package com.cs.assignone;
+package com.cs.assigntwo;
 
-import com.cs.assignone.question1.Question1;
+import com.cs.assigntwo.question1.Question1;
 
-import com.cs.assignone.dependencies.csUtility;
-import com.cs.assignone.dependencies.csScanner;
+import com.cs.assigntwo.dependencies.csUtility;
+import com.cs.assigntwo.dependencies.csScanner;
 
 /**
  * Hello world!
