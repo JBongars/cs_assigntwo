@@ -1,5 +1,8 @@
 package com.cs.assigntwo.question1;
 
+import com.cs.assigntwo.dependencies.csArray;
+
+
 public class Student {
     /*
     (a) Title of the student (eg, Mr, Miss, Ms, Mrs etc)
@@ -58,6 +61,72 @@ public class Student {
         this.finalExam = null;
     }
 
+    /*
+     * Static methods
+     */
+
+    static private Student[] swap(Student[] students, int from, int to){
+        Student studentTemp = students[from];
+        students[to] = students[from];
+        students[from] = studentTemp;
+
+        return students;
+    }
+
+    static public Student[] sort(Student[] students, String method){
+
+        int i, j;
+        double[] studentScores = new double[students.length];
+
+        for (i = 0; i < students.length; i++) {
+            studentScores[i] = students[i].getOverallMark();
+        }
+
+        double temp = studentScores[0];
+
+        // selection sort
+        for(i = 0; i < students.length; i++){
+            for(j = i; j < students.length; j++){
+                if(studentScores[j] < temp){
+                    csArray.swap(studentScores, i, j);
+                    Student.swap(students, i , j);
+                }
+            }
+        }
+        return students;
+    }
+
+    /**
+     * Filters the top two students with the highest marks
+     * @param students array of students
+     * @return the top two students with the highest marks in the class
+     */
+    static public Student[] top2HighestMark(Student[] students){
+     return students;
+    }
+
+    /**
+     * Sorts an array of students by their ID
+     * @param students array of students
+     * @return an array of students sorted by order of their ID
+     */
+    static public Student[] sortById(Student[] students){
+        return students;
+    }
+
+    /**
+     * Sorts an array of students by their last name
+     * @param students array of students
+     * @return an array of students sorted by order of their last name
+     */
+    static public Student[] sortByLastname(Student[] students){
+        return students;
+    }
+
+    /**
+     * Get the overall mark of the student
+     * @return the overall mark
+     */
     public double getOverallMark(){
         return 100.00; //replace with getOverallMark method
     }
@@ -71,6 +140,14 @@ public class Student {
         else return "N";
     }
 
+    public boolean equals(Student student) {
+        return (
+            student.getStudentID() == this.getStudentID() &&
+            student.getFirstName() == this.getFirstName() &&
+            student.getLastName() == this.getLastName() &&
+            student.getDateOfBirth() == this.getDateOfBirth()
+        );
+    }
 
     /**
      * getter method for student ID
