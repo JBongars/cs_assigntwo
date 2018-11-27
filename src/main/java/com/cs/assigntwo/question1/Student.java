@@ -1,6 +1,7 @@
 package com.cs.assigntwo.question1;
 
 import com.cs.assigntwo.dependencies.csArray;
+import sun.misc.Regexp;
 
 
 public class Student {
@@ -121,6 +122,36 @@ public class Student {
      */
     static public Student[] sortByLastname(Student[] students){
         return students;
+    }
+
+    static public Student[] searchByNameId(Student[] students, String search){
+        Student[] result = new Student[0];
+        Student[] temp;
+        String name;
+        int i, j;
+
+        if(search.matches("^[\\d]+$]")){
+            for(i = 0; i < students.length; i++){
+                if(students[i].getStudentID() == Integer.parseInt(search)){
+                    result = new Student[1];
+                    result[0] = students[i];
+                    return result;
+                }
+            }
+        } else {
+            for(i = 0; i < students.length; i++){
+                name = students[i].getFirstName() + ' ' + students[i].getLastName();
+                if(name.matches(search)){
+                    temp = result;
+                    result = new Student[result.length + 1];
+                    for(j = 0; j < temp.length; j++){
+                        result[j] = temp[j];
+                    }
+                    result[result.length - 1] = students[i];
+                }
+            }
+        }
+        return result;
     }
 
     /**
