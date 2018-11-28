@@ -22,7 +22,7 @@ public class Question1 {
         System.out.println("Results are:");
         System.out.println("===========================================================");
         for(i = 0; i < students.length; i++){
-            System.out.println((i + 1) + ".\t\t" + students[i].getLastName() + " " + students[i].getFirstName() + "\t\t| ID = " + students[i].getStudentID() + "\t\t| Marks = " + students[i].getOverallMark());
+            System.out.println((i + 1) + ".\t\t" + students[i].getLastName() + " " + students[i].getFirstName() + "\t\t| ID = " + students[i].getStudentID() + "\t\t| Marks = " + students[i].getOverallMark() + "\t\t| Grade = " + students[i].getFinalGrade());
         }
         System.out.println("===========================================================");
     }
@@ -279,7 +279,12 @@ public class Question1 {
         scn.inputStr("\n\nPress any key to continue...");
     }
 
+    public int mockRandomScore(){
+        return (int) (Math.random() * 100);
+    }
+
     public void mockStudents() {
+        int i;
         students = new Student[5];
 
         students[0] = new Student(1, "Mr.", "Jack", "Flan", 12, 10, 1989);
@@ -288,6 +293,19 @@ public class Question1 {
         students[3] = new Student(4, "Ms.", "Juliette", "Brown", 12, 12, 1982);
         students[4] = new Student(5, "Mr.", "Mark", "Tan", 12, 12, 1999);
 
+        for(i = 0; i < students.length; i++){
+            try {
+                students[i].createAssignemnt(mockRandomScore());
+                students[i].createAssignemnt(mockRandomScore());
+                students[i].createAssignemnt(mockRandomScore());
+                students[i].createPracticalWork(mockRandomScore());
+                students[i].createPracticalWork(mockRandomScore());
+                students[i].createPracticalWork(mockRandomScore());
+                students[i].createExam(mockRandomScore());
+            } catch (Exception err){
+                System.out.println("Unknown error, please check Student class...");
+            }
+        }
         return;
     }
 

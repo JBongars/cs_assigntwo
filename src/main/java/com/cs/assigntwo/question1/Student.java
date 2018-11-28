@@ -110,20 +110,16 @@ public class Student {
     static public Student[] top2HighestMark(Student[] students){
 
         int i, j;
-        double[] studentScores = new double[students.length];
-
-        for (i = 0; i < students.length; i++) {
-            studentScores[i] = students[i].getOverallMark();
-        }
-
-        double temp = studentScores[0];
+        double si, sj;
 
         // selection sort
         for(i = 0; i < students.length; i++){
             for(j = i; j < students.length; j++){
-                if(studentScores[j] < temp){
-                    csArray.swap(studentScores, i, j);
-                    Student.swap(students, i , j);
+                si = students[i].getOverallMark();
+                sj = students[j].getOverallMark();
+
+                if(!Double.isNaN(sj) && (si < sj || Double.isNaN(sj))){
+                    students = Student.swap(students, i , j);
                 }
             }
         }
