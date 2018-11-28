@@ -26,6 +26,8 @@ public class App
         char option;
         boolean FLAG = false;
 
+        csUtility.printStudentInfo("Assignment 2");
+
         do {
 
             System.out.println("=======================================");

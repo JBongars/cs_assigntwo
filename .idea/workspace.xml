@@ -7,8 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bc2eee8-0a93-49be-87d9-e0bb6e27c124" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assigntwo.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,61 +20,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Student.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Student.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4446">
-              <caret line="172" column="61" selection-start-line="172" selection-start-column="61" selection-end-line="172" selection-end-column="61" />
-              <folding>
-                <element signature="e#3064#3065#0" expanded="true" />
-                <element signature="e#3107#3108#0" expanded="true" />
-                <element signature="e#8523#8524#0" expanded="true" />
-                <element signature="e#8555#8556#0" expanded="true" />
-                <element signature="e#8655#8656#0" expanded="true" />
-                <element signature="e#8683#8684#0" expanded="true" />
-                <element signature="e#8793#8794#0" expanded="true" />
-                <element signature="e#8842#8843#0" expanded="true" />
-                <element signature="e#8954#8955#0" expanded="true" />
-                <element signature="e#8986#8987#0" expanded="true" />
-                <element signature="e#9095#9096#0" expanded="true" />
-                <element signature="e#9126#9127#0" expanded="true" />
-                <element signature="e#9316#9317#0" expanded="true" />
-                <element signature="e#9405#9406#0" expanded="true" />
-                <element signature="e#9525#9526#0" expanded="true" />
-                <element signature="e#9563#9564#0" expanded="true" />
-                <element signature="e#9689#9690#0" expanded="true" />
-                <element signature="e#9729#9730#0" expanded="true" />
-                <element signature="e#9852#9853#0" expanded="true" />
-                <element signature="e#9891#9892#0" expanded="true" />
-                <element signature="e#10045#10046#0" expanded="true" />
-                <element signature="e#10079#10080#0" expanded="true" />
-                <element signature="e#10248#10249#0" expanded="true" />
-                <element signature="e#10285#10286#0" expanded="true" />
-                <element signature="e#10400#10401#0" expanded="true" />
-                <element signature="e#10432#10433#0" expanded="true" />
-                <element signature="e#11998#11999#0" expanded="true" />
-                <element signature="e#12032#12033#0" expanded="true" />
-                <element signature="e#12171#12172#0" expanded="true" />
-                <element signature="e#12213#12214#0" expanded="true" />
-                <element signature="e#12347#12348#0" expanded="true" />
-                <element signature="e#12387#12388#0" expanded="true" />
-                <element signature="e#13025#13026#0" expanded="true" />
-                <element signature="e#13071#13072#0" expanded="true" />
-                <element signature="e#13262#13263#0" expanded="true" />
-                <element signature="e#13314#13315#0" expanded="true" />
-                <element signature="e#13465#13466#0" expanded="true" />
-                <element signature="e#13507#13508#0" expanded="true" />
-                <element signature="e#13647#13648#0" expanded="true" />
-                <element signature="e#13745#13746#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Question1.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Question1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="1106">
               <caret line="381" column="26" lean-forward="true" selection-start-line="381" selection-start-column="26" selection-end-line="381" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-190">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+            <state relative-caret-position="158">
+              <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,6 +80,15 @@
                 <element signature="e#596#597#0" expanded="true" />
                 <element signature="e#635#636#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="csUtility.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/dependencies/csUtility.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-26">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -204,8 +161,8 @@
       <find>getOverallMark</find>
       <find>2hi</find>
       <find>equal</find>
-      <find>searchForStudentsIndex</find>
       <find>assignone</find>
+      <find>searchForStudentsIndex</find>
     </findStrings>
     <replaceStrings>
       <replace>getRatio</replace>
@@ -239,10 +196,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/dependencies/csArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/PracticalWork.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Student.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/FinalExam.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Assignment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java" />
       </list>
     </option>
   </component>
@@ -311,6 +268,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="assigntwo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="assigntwo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="assigntwo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="assigntwo" type="462c0819:PsiDirectoryNode" />
+              <item name="dependencies" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="assigntwo" type="b2602c69:ProjectViewProjectNode" />
@@ -490,12 +456,12 @@
       <workItem from="1538807802094" duration="24195000" />
       <workItem from="1539265194100" duration="13775000" />
       <workItem from="1541105285567" duration="10962000" />
-      <workItem from="1543152534610" duration="22669000" />
+      <workItem from="1543152534610" duration="23003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72719000" />
+    <option name="totallyTimeSpent" value="73053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1400" height="877" extended-state="0" />
@@ -514,11 +480,11 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32948717" />
+      <window_info anchor="bottom" id="Messages" order="4" visible="true" weight="0.32948717" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Run" order="7" visible="true" weight="0.37564102" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.37564102" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26067746" />
@@ -714,13 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/dependencies/csUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/dependencies/csArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -861,24 +820,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="1106">
           <caret line="381" column="26" lean-forward="true" selection-start-line="381" selection-start-column="26" selection-end-line="381" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#9979#9980#0" expanded="true" />
             <element signature="e#10050#10051#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/dependencies/csUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
