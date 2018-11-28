@@ -40,6 +40,23 @@ public class Student {
     public Student(){}
 
     /**
+     * Deep Clone constructor
+     * @param student object we wish to clone
+     */
+    public Student(Student student){
+        this.studentID = student.getStudentID();
+        this.title = student.getTitle();
+        this.firstName = student.getFirstName();
+        this.lastName = student.getLastName();
+        this.dateOfBirth_day = student.getDateOfBirth_day();
+        this.dateOfBirth_month = student.getDateOfBirth_month();
+        this.dateOfBirth_year = student.getDateOfBirth_year();
+        this.assignments = new Assignment[3];
+        this.practicalWorks = new PracticalWork[3];
+        this.finalExam = null;
+    }
+
+    /**
      * Constructor for Student
      * @param studentID studentID
      * @param title title
@@ -66,15 +83,32 @@ public class Student {
      * Static methods
      */
 
+    static private Student clone(Student student){
+        return new Student(student);
+    }
+
     static private Student[] swap(Student[] students, int from, int to){
-        Student studentTemp = students[from];
-        students[to] = students[from];
-        students[from] = studentTemp;
+        Student studentTemp = Student.clone(students[from]);
+        students[from] = students[to];
+        students[to] = studentTemp;
 
         return students;
     }
 
-    static public Student[] sort(Student[] students, String method){
+    static private void printArray(Student[] students){
+        int i;
+        for(i = 0; i < students.length; i++){
+            System.out.println(students[i].toString());
+        }
+        System.out.println("\n");
+    }
+
+    /**
+     * Filters the top two students with the highest marks
+     * @param students array of students
+     * @return the top two students with the highest marks in the class
+     */
+    static public Student[] top2HighestMark(Student[] students){
 
         int i, j;
         double[] studentScores = new double[students.length];
@@ -98,21 +132,22 @@ public class Student {
     }
 
     /**
-     * Filters the top two students with the highest marks
-     * @param students array of students
-     * @return the top two students with the highest marks in the class
-     */
-    static public Student[] top2HighestMark(Student[] students){
-     return students;
-    }
-
-    /**
      * Sorts an array of students by their ID
      * @param students array of students
      * @return an array of students sorted by order of their ID
      */
     static public Student[] sortById(Student[] students){
-        return students;
+        int i, j;
+        Student [] result = students;
+
+        for(i = 0; i < result.length; i++){
+            for(j = i + 1; j < result.length; j++){
+                if(result[j].getStudentID() < result[i].getStudentID()){
+                    result = swap(result, i, j);
+                }
+            }
+        }
+        return result;
     }
 
     /**
@@ -120,31 +155,45 @@ public class Student {
      * @param students array of students
      * @return an array of students sorted by order of their last name
      */
-    static public Student[] sortByLastname(Student[] students){
-        return students;
+    static public Student[] sortByLastName(Student[] students){
+        int i, j;
+        Student [] result = students;
+
+        for(i = 0; i < result.length ; i++){
+            for(j = i + 1; j < result.length; j++){
+                if(result[i].getLastName().compareTo(result[j].getLastName()) > 0){
+                    result = swap(result, i, j);
+                }
+            }
+        }
+        return result;
     }
 
-    static public Student[] searchByNameId(Student[] students, String search){
+    static public Student[] searchArray(Student[] students, String search){
         Student[] result = new Student[0];
         Student[] temp;
         String name;
         int i, j;
 
-        if(search.matches("^[\\d]+$]")){
+        try {
+            int search_id = Integer.parseInt(search);
+
+            System.out.println("search is id!");
             for(i = 0; i < students.length; i++){
-                if(students[i].getStudentID() == Integer.parseInt(search)){
+                if(students[i].getStudentID() == search_id){
                     result = new Student[1];
                     result[0] = students[i];
-                    return result;
                 }
             }
-        } else {
-            for(i = 0; i < students.length; i++){
-                name = students[i].getFirstName() + ' ' + students[i].getLastName();
-                if(name.matches(search)){
+
+        } catch (Exception err){
+            System.out.println("search is name!");
+            for(i = 0; i < students.length; i++) {
+                name = students[i].getLastName();
+                if (name.matches(search)) {
                     temp = result;
                     result = new Student[result.length + 1];
-                    for(j = 0; j < temp.length; j++){
+                    for (j = 0; j < temp.length; j++) {
                         result[j] = temp[j];
                     }
                     result[result.length - 1] = students[i];
@@ -197,6 +246,14 @@ public class Student {
     }
 
     /**
+     * getter method for full name
+     * @return fullname
+     */
+    public String getFullName() {
+        return firstName + ' ' + lastName;
+    }
+
+    /**
      * getter method for firstName
      * @return firstName
      */
@@ -218,6 +275,30 @@ public class Student {
      */
     public String getDateOfBirth() {
         return dateOfBirth_day + "/" + dateOfBirth_month + "/" + dateOfBirth_year;
+    }
+
+    /**
+     * getter for dateOfBirth_day
+     * @return dateOfBirth_day
+     */
+    public int getDateOfBirth_day() {
+        return dateOfBirth_day;
+    }
+
+    /**
+     * getter for dateOfBirth_month
+     * @return dateOfBirth_month
+     */
+    public int getDateOfBirth_month() {
+        return dateOfBirth_month;
+    }
+
+    /**
+     * getter for dateOfBirth_year
+     * @return dateOfBirth_year
+     */
+    public int getDateOfBirth_year() {
+        return dateOfBirth_year;
     }
 
     /**
@@ -310,6 +391,6 @@ public class Student {
      */
     @Override
     public String toString(){
-        return "< Student id=" + this.studentID + " >";
+        return "< Student id=" + this.studentID + "Last Name=" + this.getFullName() + " >";
     }
 }

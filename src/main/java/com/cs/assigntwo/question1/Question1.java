@@ -20,11 +20,11 @@ public class Question1 {
         int i;
         System.out.println("\n");
         System.out.println("Results are:");
-        System.out.println("============================================");
+        System.out.println("===========================================================");
         for(i = 0; i < students.length; i++){
-            System.out.println((i + 1) + ".\t\t" + students[i].getFirstName() + " " + students[i].getLastName() + "\t\t| ID = " + students[i].getStudentID() + "\t\t| Marks = " + students[i].getOverallMark());
+            System.out.println((i + 1) + ".\t\t" + students[i].getLastName() + " " + students[i].getFirstName() + "\t\t| ID = " + students[i].getStudentID() + "\t\t| Marks = " + students[i].getOverallMark());
         }
-        System.out.println("============================================");
+        System.out.println("===========================================================");
     }
 
 
@@ -32,10 +32,9 @@ public class Question1 {
         int i;
         int option;
 
-        String search = scn.inputStr("Search students by Name or Id:");
-//        Student[] results = Student.searchByNameId(students, search);
+        String search = scn.inputStr("Search students by Last Name or Id:");
+        Student[] results = Student.searchArray(students, search);
 
-        Student[] results = students;
         printTable(results);
 
         option = scn.inputInt("Select the index you would like to update:") - 1;
@@ -149,20 +148,27 @@ public class Question1 {
     }
 
     /**
-     * get table of results
+     * get table of results by Id
      */
-    public void getResult() {
-        System.out.println("getting results...");
-
+    public void getStudents() {
+        printTable(Student.sortById(students));
+        scn.inputStr("\n\nPress any key to continue...");
     }
 
+    /**
+     * get table of results
+     */
+    public void getStudentsByName() {
+        printTable(Student.sortByLastName(students));
+        scn.inputStr("\n\nPress any key to continue...");
+    }
 
     /**
      * get table of results by Top score
      */
     public void getResultByTopScore() {
-        System.out.println("getting result top scores...");
-
+        printTable(Student.top2HighestMark(students));
+        scn.inputStr("\n\nPress any key to continue...");
     }
 
     public void mockStudents() {
@@ -195,11 +201,12 @@ public class Question1 {
             System.out.println("=======================================");
             System.out.println("OPTIONS");
             System.out.println("=======================================");
-            System.out.println("1 - Create New Record");
-            System.out.println("2 - Update Record");
-            System.out.println("3 - Delete Record");
-            System.out.println("4 - Get Top Scores");
-            System.out.println("5 - Get Students arranged by Name");
+            System.out.println("1 - List Records");
+            System.out.println("2 - List Records By Name");
+            System.out.println("3 - List Records By Top Score");
+            System.out.println("4 - Create New Record");
+            System.out.println("5 - Update Record");
+            System.out.println("6 - Delete Record");
             System.out.println("=======================================");
             System.out.println("0 - Exit the Application");
             System.out.println("=======================================");
@@ -208,22 +215,23 @@ public class Question1 {
             option = scn.inputChar("Please enter option:");
             switch (option){
                 case '1':
-                    createStudents();
+                    getStudents();
                     break;
                 case '2':
-                    updateStudent();
+                    getStudentsByName();
                     break;
                 case '3':
-                    deleteStudent();
-                    break;
-                case '4':
                     getResultByTopScore();
                     break;
-                case '5':
-                    getResult();
+                case '4':
+                    createStudents();
                     break;
-                case '0':
-                    return;
+                case '5':
+                    updateStudent();
+                    break;
+                case '6':
+                    deleteStudent();
+                    break;
                 default:
                     System.out.println("Invalid Entry please try again");
             }
