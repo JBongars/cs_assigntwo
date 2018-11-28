@@ -389,6 +389,8 @@ public class Question1 {
                 case '7':
                     deleteStudent();
                     break;
+                case '0':
+                    return;
                 default:
                     System.out.println("Invalid Entry please try again");
             }
