@@ -17,7 +17,10 @@ public class App
 
 //    public static Object[] options = {new Question1(), new Question2()};
 
-
+    /**
+     * Main Menu
+     * @param args
+     */
     public static void main( String[] args )
     {
         char option;

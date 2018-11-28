@@ -2,7 +2,9 @@ package com.cs.assigntwo.question1;
 
 import com.cs.assigntwo.dependencies.csArray;
 
-
+/**
+ * Student class
+ */
 public class Student {
     /*
     (a) Title of the student (eg, Mr, Miss, Ms, Mrs etc)
@@ -164,6 +166,12 @@ public class Student {
         return result;
     }
 
+    /**
+     * Search array of students by name or id (depending on weather it can be parsed
+     * @param students array of students
+     * @param search search string
+     * @return array of students that fit the search criteria
+     */
     static public Student[] searchArray(Student[] students, String search){
         Student[] result = new Student[0];
         Student[] temp;
@@ -251,6 +259,11 @@ public class Student {
         else return "N";
     }
 
+    /**
+     * compares foreign student with current object
+     * @param student foreign object
+     * @return boolean value
+     */
     public boolean equals(Student student) {
         return (
             student.getStudentID() == this.getStudentID() &&

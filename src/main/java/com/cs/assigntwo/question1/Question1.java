@@ -3,6 +3,10 @@ package com.cs.assigntwo.question1;
 import com.cs.assigntwo.dependencies.csScanner;
 import com.cs.assigntwo.dependencies.csUtility;
 
+/**
+ * Interface Application
+ * Attempt to decouple pure Student logic from interface
+ */
 public class Question1 {
 
     private csScanner scn;
@@ -16,7 +20,11 @@ public class Question1 {
         students = new Student[0]; // declare array size of zero
     }
 
-    public void printTable(Student[] students){
+    /**
+     * Prints a table of the students, used internally
+     * @param students
+     */
+    private void printTable(Student[] students){
         int i;
         System.out.println("\n\n\n\n");
         System.out.println("Results are:");
@@ -27,8 +35,12 @@ public class Question1 {
         System.out.println("===========================================================");
     }
 
-
-    public int searchForStudentsIndex(){
+    /**
+     * Searches students via name or id, translates presentational index to actual index of students
+     * Provides Interface for user to select specific student
+     * @return index of student relative to this.students
+     */
+    private int searchForStudentsIndex(){
         int i;
         int option;
 
@@ -60,7 +72,11 @@ public class Question1 {
     }
 
 
-
+    /**
+     * Interface to create a new student and pass student object on
+     * Used in various applications of student creation and student update
+     * @return student
+     */
     public Student generateStudent(){
         System.out.println("\n\n\n\n");
         System.out.println("Please enter the following information: ");
@@ -77,6 +93,11 @@ public class Question1 {
         return new Student(studentID, title, firstName, lastName, dateOfBirth_day, dateOfBirth_month, dateOfBirth_year);
     }
 
+    /**
+     * Provides user interface to check whether a student's information is correct
+     * @param student Student object
+     * @return boolean
+     */
     public boolean checkGeneratedStudent(Student student){
         System.out.println("\n\n\n\n");
         System.out.println("Please confirm that the following information is correct: ");
@@ -94,6 +115,7 @@ public class Question1 {
 
     /**
      * Prints student's marks breakdown
+     * @param student selected student
      */
     public void showMarksBreakdown(Student student){
         Assignment[] assignments = student.getAssignments();
@@ -131,7 +153,7 @@ public class Question1 {
     }
 
     /**
-     * Create students
+     * Create a new student
      */
     public void createStudents(){
         Student temp = generateStudent();
@@ -279,10 +301,17 @@ public class Question1 {
         scn.inputStr("\n\nPress any key to continue...");
     }
 
+    /**
+     * mock a random score from 0 to 100
+     * @return
+     */
     public int mockRandomScore(){
         return (int) (Math.random() * 100);
     }
 
+    /**
+     * Mock students
+     */
     public void mockStudents() {
         int i;
         students = new Student[5];
@@ -294,6 +323,7 @@ public class Question1 {
         students[4] = new Student(5, "Mr.", "Mark", "Tan", 12, 12, 1999);
 
         for(i = 0; i < students.length; i++){
+            //some of these method have the potential of generating an Exception error
             try {
                 students[i].createAssignemnt(mockRandomScore());
                 students[i].createAssignemnt(mockRandomScore());
@@ -306,7 +336,6 @@ public class Question1 {
                 System.out.println("Unknown error, please check Student class...");
             }
         }
-        return;
     }
 
     /**
