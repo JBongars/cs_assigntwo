@@ -2,6 +2,8 @@ package com.cs.assigntwo.question1;
 
 import com.cs.assigntwo.dependencies.csScanner;
 import com.cs.assigntwo.dependencies.csUtility;
+import com.sun.org.apache.xerces.internal.util.ShadowedSymbolTable;
+import com.sun.org.apache.xerces.internal.util.SymbolTable;
 
 public class Question1 {
 
@@ -80,23 +82,53 @@ public class Question1 {
     }
 
     /**
+     * Prints student's marks breakdown
+     */
+    public void showMarksBreakdown(Student student){
+        Assignment[] assignments = student.getAssignments();
+        PracticalWork[] practicalWorks = student.getPracticalWorks();
+        FinalExam finalExam = student.getFinalExam();
+        int i;
+
+        System.out.println("=======================================================");
+        System.out.println("Marks Breakdown");
+        System.out.println("=======================================================");
+        System.out.println("1. Assignments");
+        for(i = 0; i < assignments.length; i++){
+            if(assignments[i] != null){
+                System.out.println("\t-\t" + Integer.toString(assignments[i].getScore()));
+            }
+        }
+        System.out.println("2. Practical Works");
+        for(i = 0; i < practicalWorks.length; i++){
+            if(practicalWorks[i] != null) {
+                System.out.println("\t-\t" + Integer.toString(practicalWorks[i].getScore()));
+            }
+        }
+        System.out.println("3. Final Exam");
+
+        if(finalExam != null) {
+            System.out.println("\t-\t" + Integer.toString(finalExam.getScore()));
+        } else {
+            System.out.println("\t-\tNO TEST");
+        }
+        System.out.println("=======================================================");
+        System.out.println("TOTAL SCORE: " + student.getOverallMark());
+        System.out.println("FINAL GRADE: " + student.getFinalGrade());
+        System.out.println("=======================================================");
+    }
+
+    /**
      * Create students
      */
     public void createStudents(){
         Student temp = generateStudent();
 
         if(checkGeneratedStudent(temp)){
-            Student[] tempArray = new Student[students.length + 1];
-
-            for(int i = 0; i < this.students.length; i++){
-                tempArray[i] = this.students[i];
-            }
-            tempArray[tempArray.length - 1] = temp;
-            this.students = tempArray;
+            students[students.length - 1] = temp;
         } else {
             System.out.println("Operation Cancelled");
         }
-        return;
     }
 
     /**
@@ -116,6 +148,70 @@ public class Question1 {
             if(checkGeneratedStudent(temp)){
                 this.students[index] = temp;
             }
+        }
+    }
+
+    /**
+     * Updates a student's marks
+     */
+    public void updateStudentMarks(){
+
+        boolean FLAG;
+        int score;
+
+        int index = searchForStudentsIndex();
+        if(index == -1){
+            if(scn.inputBool("Invalid Response. Would you like to try again?", 'y')){
+                updateStudentMarks();
+            }
+            return;
+        } else {
+            do {
+                csUtility.clearScreen();
+                System.out.println("=========================================================");
+                System.out.println("Mark Options");
+                System.out.println("=========================================================");
+                System.out.println("1. List marks breakdown");
+                System.out.println("2. Add new Assignment");
+                System.out.println("3. Add new Practical Work");
+                System.out.println("4. Update exam score");
+                System.out.println("5. Reset marks");
+                System.out.println("=========================================================");
+                System.out.println("0. Exit without saving changes");
+                System.out.println("=========================================================");
+
+                switch (scn.inputChar("Please enter an option...")){
+                    case '1':
+                        showMarksBreakdown(students[index]);
+                        break;
+                    case '2':
+                        score = scn.inputInt("Please enter assignment score:");
+                        try {
+                            students[index].createAssignemnt(score);
+                        } catch (Exception err) {
+                            System.out.println("Number of Assignments already exceed the limit");
+                        }
+                        break;
+                    case '3':
+                        score = scn.inputInt("Please enter practical works score:");
+                        try {
+                            students[index].createPracticalWork(score);
+                        } catch (Exception err) {
+                            System.out.println("Number of Practical Works already exceed the limit");
+                        }
+                        break;
+                    case '4':
+                        score = scn.inputInt("Please enter final exam score:");
+                        students[index].createExam(score);
+                        break;
+                    case '5':
+                        students[index].resetMarks();
+                        break;
+                    case '0':
+                        return;
+                    default:
+                }
+            } while(scn.inputBool("Changes saved! Would you like to make another transaction?", 'y'));
         }
     }
 
@@ -205,12 +301,12 @@ public class Question1 {
             System.out.println("2 - List Records By Name");
             System.out.println("3 - List Records By Top Score");
             System.out.println("4 - Create New Record");
-            System.out.println("5 - Update Record");
-            System.out.println("6 - Delete Record");
+            System.out.println("5 - Score Further Options");
+            System.out.println("6 - Update Record Details");
+            System.out.println("7 - Delete Record");
             System.out.println("=======================================");
             System.out.println("0 - Exit the Application");
             System.out.println("=======================================");
-            System.out.println("");
 
             option = scn.inputChar("Please enter option:");
             switch (option){
@@ -227,9 +323,12 @@ public class Question1 {
                     createStudents();
                     break;
                 case '5':
-                    updateStudent();
+                    updateStudentMarks();
                     break;
                 case '6':
+                    updateStudent();
+                    break;
+                case '7':
                     deleteStudent();
                     break;
                 default:

@@ -1,7 +1,6 @@
 package com.cs.assigntwo.question1;
 
 import com.cs.assigntwo.dependencies.csArray;
-import sun.misc.Regexp;
 
 
 public class Student {
@@ -208,9 +207,45 @@ public class Student {
      * @return the overall mark
      */
     public double getOverallMark(){
-        return 100.00; //replace with getOverallMark method
+        int i;
+        int count = 0;
+        double total = 0.00;
+        double section_total = 0.00;
+
+        for(i = 0; i < assignments.length; i++){
+            if(assignments[i] != null){
+                count++;
+                section_total += (double) assignments[i].getScore();
+            }
+        }
+
+        total += (section_total / count) * 0.400;
+        section_total = 0.00;
+        count = 0;
+
+
+        for(i = 0; i < practicalWorks.length; i++){
+            if(practicalWorks[i] != null){
+                count++;
+                section_total += (double) assignments[i].getScore();
+            }
+        }
+
+        total += (section_total / count) * 0.100;
+        section_total = 0.00;
+
+        if(finalExam != null) {
+            section_total += (double) finalExam.getScore();
+        }
+
+        total += section_total * 0.400;
+        return total;
     }
 
+    /**
+     * Calculates the final Letter Grade
+     * @return Letter Grade
+     */
     public String getFinalGrade(){
         double marks = getOverallMark();
         if(marks >= 80) return "HD";
@@ -323,6 +358,56 @@ public class Student {
      */
     public FinalExam getFinalExam() {
         return finalExam;
+    }
+
+    /**
+     * Create New Assignment
+     * @param score the assignment score
+     * @throws Exception if there too many assignment saved
+     */
+    public void createAssignemnt(int score) throws Exception {
+        Assignment work = new Assignment(score);
+        int i;
+        for(i = 0; i < this.assignments.length; i++){
+            if(this.assignments[i] == null){
+                this.assignments[i] = work;
+                return;
+            }
+        }
+        throw new Exception("new works exceed max limit");
+    }
+
+    /**
+     * Create New Practical Work
+     * @param score the practical work score
+     * @throws Exception if there too many assignment saved
+     */
+    public void createPracticalWork(int score) throws Exception {
+        PracticalWork work = new PracticalWork(score);
+        int i;
+        for(i = 0; i < this.practicalWorks.length; i++){
+            if(this.practicalWorks[i] == null){
+                this.practicalWorks[i] = work;
+                return;
+            }
+        }
+        throw new Exception("new works exceed max limit");
+    }
+
+    /**
+     * Create new Exam
+     * @param score exam score
+     */
+    public void createExam(int score){
+        FinalExam exam = new FinalExam(score);
+        this.finalExam = exam;
+    }
+
+
+    public void resetMarks(){
+        this.assignments = new Assignment[3];
+        this.practicalWorks = new PracticalWork[3];
+        this.finalExam = null;
     }
 
     /**
