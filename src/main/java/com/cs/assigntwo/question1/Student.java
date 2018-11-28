@@ -219,7 +219,7 @@ public class Student {
             }
         }
 
-        total += (section_total / count) * 0.400;
+        total += (section_total / count) * 0.450;
         section_total = 0.00;
         count = 0;
 
@@ -238,7 +238,7 @@ public class Student {
             section_total += (double) finalExam.getScore();
         }
 
-        total += section_total * 0.400;
+        total += section_total * 0.450;
         return total;
     }
 

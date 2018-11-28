@@ -2,8 +2,6 @@ package com.cs.assigntwo.question1;
 
 import com.cs.assigntwo.dependencies.csScanner;
 import com.cs.assigntwo.dependencies.csUtility;
-import com.sun.org.apache.xerces.internal.util.ShadowedSymbolTable;
-import com.sun.org.apache.xerces.internal.util.SymbolTable;
 
 public class Question1 {
 
@@ -20,7 +18,7 @@ public class Question1 {
 
     public void printTable(Student[] students){
         int i;
-        System.out.println("\n");
+        System.out.println("\n\n\n\n");
         System.out.println("Results are:");
         System.out.println("===========================================================");
         for(i = 0; i < students.length; i++){
@@ -37,21 +35,34 @@ public class Question1 {
         String search = scn.inputStr("Search students by Last Name or Id:");
         Student[] results = Student.searchArray(students, search);
 
+        if(results.length == 0){
+            System.out.println("No results found!\n\n");
+            return -1;
+        }
+
         printTable(results);
 
         option = scn.inputInt("Select the index you would like to update:") - 1;
 
         if(option > results.length){
+            System.out.println("\nInvalid character entered");
             return -1;
         }
 
-        return option;
+        for(i = 0; i < students.length; i++){
+            if(students[i].getStudentID() == results[option].getStudentID()){
+                return i;
+            }
+        }
+
+        System.out.println("\nSomething went wrong...");
+        return -1;
     }
 
 
 
     public Student generateStudent(){
-        System.out.println("\n\n");
+        System.out.println("\n\n\n\n");
         System.out.println("Please enter the following information: ");
         System.out.println("============================================");
 
@@ -67,7 +78,7 @@ public class Question1 {
     }
 
     public boolean checkGeneratedStudent(Student student){
-        System.out.println("\n\n");
+        System.out.println("\n\n\n\n");
         System.out.println("Please confirm that the following information is correct: ");
         System.out.println("============================================");
 
@@ -90,8 +101,9 @@ public class Question1 {
         FinalExam finalExam = student.getFinalExam();
         int i;
 
+        csUtility.clearScreen();
         System.out.println("=======================================================");
-        System.out.println("Marks Breakdown");
+        System.out.println("Marks Breakdown for " + student.getFullName() + " - ID" + student.getStudentID());
         System.out.println("=======================================================");
         System.out.println("1. Assignments");
         for(i = 0; i < assignments.length; i++){
@@ -293,7 +305,6 @@ public class Question1 {
         while(true) {
 
             csUtility.clearScreen();
-
             System.out.println("=======================================");
             System.out.println("OPTIONS");
             System.out.println("=======================================");
