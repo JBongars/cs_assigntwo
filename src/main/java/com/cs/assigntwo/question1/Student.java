@@ -89,7 +89,7 @@ public class Student {
     }
 
     static private Student[] swap(Student[] students, int from, int to){
-        Student studentTemp = Student.clone(students[from]);
+        Student studentTemp = students[from];
         students[from] = students[to];
         students[to] = studentTemp;
 

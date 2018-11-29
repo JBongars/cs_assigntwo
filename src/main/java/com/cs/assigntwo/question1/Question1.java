@@ -302,6 +302,50 @@ public class Question1 {
     }
 
     /**
+     * get table of results by ID
+     */
+    public void getResultByID(){
+        printTable(Student.sortById(students));
+        scn.inputStr("\n\nPress any key to continue");
+    }
+
+    /**
+     * get table of total marks and average distribution
+     */
+    public void getAverageMarks(){
+        String[] marks = {"HD", "D", "C", "P", "N"};
+        int[] tally = {0, 0, 0, 0, 0};
+        int i, j;
+        String currentMarks;
+
+        int average = 0;
+
+        for(i = 0; i < students.length; i++) {
+            average += students[i].getOverallMark();
+            currentMarks = students[i].getFinalGrade();
+            for (j = 0; j < marks.length; j++) {
+                if (currentMarks == marks[j]) {
+                    tally[j]++;
+                    break;
+                }
+            }
+        }
+        average = average / students.length;
+
+        System.out.println("=======================================================");
+        System.out.println("");
+        System.out.println("=======================================================");
+        for(i = 0; i < marks.length; i++){
+            System.out.println(i + ". " + marks[i] + " => " + tally[i]);
+        }
+        System.out.println("=======================================================");
+        System.out.println("AVERAGE SCORE: " + average);
+        System.out.println("=======================================================");
+
+        scn.inputStr("\n\nPress any key to continue...");
+    }
+
+    /**
      * mock a random score from 0 to 100
      * @return
      */
@@ -358,10 +402,12 @@ public class Question1 {
             System.out.println("1 - List Records");
             System.out.println("2 - List Records By Name");
             System.out.println("3 - List Records By Top Score");
-            System.out.println("4 - Create New Record");
-            System.out.println("5 - Score Further Options");
-            System.out.println("6 - Update Record Details");
-            System.out.println("7 - Delete Record");
+            System.out.println("4 - List Records By ID");
+            System.out.println("5 - Get Marks Averages");
+            System.out.println("6 - Create New Record");
+            System.out.println("7 - Score Further Options");
+            System.out.println("8 - Update Record Details");
+            System.out.println("9 - Delete Record");
             System.out.println("=======================================");
             System.out.println("0 - Exit the Application");
             System.out.println("=======================================");
@@ -378,15 +424,21 @@ public class Question1 {
                     getResultByTopScore();
                     break;
                 case '4':
-                    createStudents();
+                    getResultByID();
                     break;
                 case '5':
-                    updateStudentMarks();
+                    getAverageMarks();
                     break;
                 case '6':
-                    updateStudent();
+                    createStudents();
                     break;
                 case '7':
+                    updateStudentMarks();
+                    break;
+                case '8':
+                    updateStudent();
+                    break;
+                case '9':
                     deleteStudent();
                     break;
                 case '0':
