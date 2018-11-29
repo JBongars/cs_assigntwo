@@ -7,6 +7,8 @@ import com.cs.assigntwo.dependencies.csArray;
  */
 public class Student {
     /*
+    INSTRUCTIONS
+
     (a) Title of the student (eg, Mr, Miss, Ms, Mrs etc)
     (b) A first name (given name)
     (c) A last name (family name/surname)

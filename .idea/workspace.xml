@@ -6,7 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2eee8-0a93-49be-87d9-e0bb6e27c124" name="Default" comment="" />
+    <list default="true" id="5bc2eee8-0a93-49be-87d9-e0bb6e27c124" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Student.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,17 +24,17 @@
       <file leaf-file-name="Student.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-975">
-              <caret line="172" column="61" selection-start-line="172" selection-start-column="61" selection-end-line="172" selection-end-column="61" />
+            <state relative-caret-position="73">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Question1.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Question1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="348" column="31" lean-forward="true" selection-start-line="348" selection-start-column="31" selection-end-line="348" selection-end-column="31" />
+            <state relative-caret-position="100">
+              <caret line="385" column="32" selection-start-line="385" selection-start-column="32" selection-end-line="385" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#12297#12298#0" expanded="true" />
@@ -41,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state relative-caret-position="142">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,8 +111,8 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+            <state relative-caret-position="180">
+              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -186,9 +189,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/PracticalWork.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/FinalExam.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Assignment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java" />
       </list>
     </option>
   </component>
@@ -445,12 +448,12 @@
       <workItem from="1538807802094" duration="24195000" />
       <workItem from="1539265194100" duration="13775000" />
       <workItem from="1541105285567" duration="10962000" />
-      <workItem from="1543152534610" duration="25125000" />
+      <workItem from="1543152534610" duration="25621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75175000" />
+    <option name="totallyTimeSpent" value="75671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1400" height="877" extended-state="0" />
@@ -467,16 +470,16 @@
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="9" visible="true" weight="0.40128204" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.40128204" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Messages" order="5" weight="0.32948717" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.37564102" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.37564102" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26067746" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.26067746" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32948717" />
       <window_info id="Learn" order="0" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -738,8 +741,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="180">
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -767,31 +770,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-975">
-          <caret line="172" column="61" selection-start-line="172" selection-start-column="61" selection-end-line="172" selection-end-column="61" />
+        <state relative-caret-position="73">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="348" column="31" lean-forward="true" selection-start-line="348" selection-start-column="31" selection-end-line="348" selection-end-column="31" />
+        <state relative-caret-position="100">
+          <caret line="385" column="32" selection-start-line="385" selection-start-column="32" selection-end-line="385" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#12297#12298#0" expanded="true" />
             <element signature="e#12347#12348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

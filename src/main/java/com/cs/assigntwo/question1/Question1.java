@@ -9,6 +9,31 @@ import com.cs.assigntwo.dependencies.csUtility;
  */
 public class Question1 {
 
+
+    /*
+    1. Quit (exit the program)
+
+    2. Add (to the array) all information about a student (except the overall mark and the grade) by
+    reading it from the keyboard and determine the student’s grade
+
+    3. Output from the array the details (all information including the overall mark and the grade) of
+    all students currently held in the array
+
+    4. Compute and output the average overall mark for students currently held in the array
+
+    5. Determine and display how many students obtained an overall mark equal to or above the
+    average overall mark and how many obtained an overall mark below the average overall mark
+
+    6. Display the distribution of grades (i.e., the number of HDs, Ds etc) awarded
+
+    7. Given a student number (ID), view all details of the student with that number. If the student is
+    not found in the array, an appropriate error message is to be displayed
+
+    8. Given a student’s name (both surname and given name – ignoring case), view all details of that
+    student. If the student is not found in the array, an appropriate error message is to be displayed
+     */
+
+
     private csScanner scn;
     private Student[] students;
 
@@ -358,13 +383,23 @@ public class Question1 {
      */
     public void mockStudents() {
         int i;
-        students = new Student[5];
+        students = new Student[15];
 
         students[0] = new Student(1, "Mr.", "Jack", "Flan", 12, 10, 1989);
-        students[1] = new Student(2, "Ms.", "Sarah", "Foster", 12, 12, 1998);
-        students[2] = new Student(3, "Mr.", "John", "White", 12, 10, 1997);
+        students[1] = new Student(2, "Ms.", "Sarah", "Foster", 1, 12, 1998);
+        students[2] = new Student(3, "Mr.", "John", "White", 5, 10, 1997);
         students[3] = new Student(4, "Ms.", "Juliette", "Brown", 12, 12, 1982);
-        students[4] = new Student(5, "Mr.", "Mark", "Tan", 12, 12, 1999);
+        students[4] = new Student(5, "Mr.", "Mark", "Cake", 12, 12, 1999);
+        students[5] = new Student(6, "Mr.", "Matthew", "Black", 19, 3, 1989);
+        students[6] = new Student(7, "Ms.", "Emily", "Burger", 7, 12, 1998);
+        students[7] = new Student(8, "Mr.", "Guy", "Mew", 26, 4, 1997);
+        students[8] = new Student(9, "Ms.", "Sophia", "Tan", 31, 5, 1982);
+        students[9] = new Student(11, "Mr.", "Pierre", "Can", 14, 12, 1999);
+        students[10] = new Student(12, "Mr.", "Billy", "Frawn", 15, 1, 1989);
+        students[11] = new Student(13, "Ms.", "Amanda", "Periperi", 16, 9, 1998);
+        students[12] = new Student(14, "Mr.", "Carl", "Candy", 12, 10, 1997);
+        students[13] = new Student(15, "Ms.", "Bowsette", "Savory", 21, 12, 1982);
+        students[14] = new Student(16, "Mr.", "William", "Spicy", 23, 5, 1999);
 
         for(i = 0; i < students.length; i++){
             //some of these method have the potential of generating an Exception error
