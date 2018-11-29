@@ -38,7 +38,7 @@ public class Question1 {
     private Student[] students;
 
     /**
-     * Constructor
+     * @title Constructor
      */
     public Question1() {
         this.scn = new csScanner();
@@ -55,7 +55,7 @@ public class Question1 {
         System.out.println("Results are:");
         System.out.println("===========================================================");
         for(i = 0; i < students.length; i++){
-            System.out.println((i + 1) + ".\t\t" + students[i].getLastName() + " " + students[i].getFirstName() + "\t\t| ID = " + students[i].getStudentID() + "\t\t| Marks = " + students[i].getOverallMark() + "\t\t| Grade = " + students[i].getFinalGrade());
+            System.out.println((i + 1) + ".\t\t" + students[i].getLastName() + " " + students[i].getFirstName() + "\t\t| ID = " + students[i].getStudentID() + "\t\t| Marks = " + (short) students[i].getOverallMark() + "\t\t| Grade = " + students[i].getFinalGrade());
         }
         System.out.println("===========================================================");
     }
