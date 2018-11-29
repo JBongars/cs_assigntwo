@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bc2eee8-0a93-49be-87d9-e0bb6e27c124" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Question1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/assigntwo/question1/Student.java" afterDir="false" />
-    </list>
+    <list default="true" id="5bc2eee8-0a93-49be-87d9-e0bb6e27c124" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,8 +44,8 @@
       <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+            <state relative-caret-position="390">
+              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -448,12 +445,12 @@
       <workItem from="1538807802094" duration="24195000" />
       <workItem from="1539265194100" duration="13775000" />
       <workItem from="1541105285567" duration="10962000" />
-      <workItem from="1543152534610" duration="25033000" />
+      <workItem from="1543152534610" duration="25125000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75083000" />
+    <option name="totallyTimeSpent" value="75175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1400" height="877" extended-state="0" />
@@ -470,7 +467,7 @@
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.40128204" />
+      <window_info anchor="bottom" id="Debug" order="9" visible="true" weight="0.40128204" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Messages" order="5" weight="0.32948717" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
@@ -479,7 +476,7 @@
       <window_info anchor="bottom" id="Run" order="8" weight="0.37564102" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.26067746" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26067746" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32948717" />
       <window_info id="Learn" order="0" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -791,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/assigntwo/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="36" column="74" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
+        <state relative-caret-position="390">
+          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
